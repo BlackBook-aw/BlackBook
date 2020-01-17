@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+<style>
+a {
+text-decoration: none;
+}
+</style>
+<title>Random Sentence w/Cookie script - Demo</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+<body bgcolor="black" link="#E1E1E1" vlink="#E1E1E1" alink="#E1E1E1">
+<font color="#E1E1E1" face="Harrington" size=7><Center>
+<span id="theS"></span>
+<script type="text/javascript">
+/* Random Sentence w/Cookie script
+* All credits must remain for legal use */
+
+// Cookie code from: http://www.quirksmode.org/js/cookies.html
+function createCookie(name,value) {
+document.cookie = name+"="+value+"; path=/";
+}
+
+function readCookie(name) {
+var nameEQ = name + "=";
+var ca = document.cookie.split(';');
+for(var i=0;i < ca.length;i++) {
+var c = ca[i];
+while (c.charAt(0)==' ') c = c.substring(1,c.length);
+if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+}
+return null;
+}
+
+function rs(){ // Random Sentence on Refresh w/Cookie - jscheuer1 - http://www.dynamicdrive.com/forums
+var s=[
+'<a href="javascript:location.reload(true)">Don`t problem the problem, let the problem problem you</a>',
+'<a href="javascript:location.reload(true)">Growing old is mandatory, growing up is optional</a>',
+'<a href="javascript:location.reload(true)">It`s not what you say, it`s how you say it</a>',
+'<a href="javascript:location.reload(true)">INSANITY: doing the same thing over and over again and expecting different results</a>',
+'<a href="javascript:location.reload(true)">Two things are infinite: the universe and human stupidity; and I`m not sure about the universe</a>',
+'<a href="javascript:location.reload(true)">Do not take life too seriously, you will never get out of it alive</a>',
+'<a href="javascript:location.reload(true)">Behind every great man is a woman rolling her eyes</a>',
+'<a href="javascript:location.reload(true)">Laziness is nothing more than the habit of resting before you get tired</a>',
+'<a href="javascript:location.reload(true)">A woman`s mind is cleaner than a man`s; because she changes it more often</a>',
+'<a href="javascript:location.reload(true)">Everything is funny, as long as it`s happening to somebody else</a>',
+'<a href="javascript:location.reload(true)">Why do they call it rush hour when nothing moves?</a>',
+'<a href="javascript:location.reload(true)">Man cannot live by bread alone; he must have peanut butter</a>',
+'<a href="javascript:location.reload(true)">I can resist everything except temptation</a>',
+'<a href="javascript:location.reload(true)">Always remember that you are absolutely unique, just like everyone else</a>',
+'<a href="javascript:location.reload(true)">Artificial intelligence is no match for natural stupidity</a>',
+'<a href="javascript:location.reload(true)">The only substitute for good manners is fast reflexes</a>',
+'<a href="javascript:location.reload(true)">The problem with troubleshooting is that the trouble shoots back</a>',
+'<a href="javascript:location.reload(true)">The early bird may get the worm, but the second mouse gets the cheese</a>',
+'<a href="javascript:location.reload(true)">Bombs don`t kill people, explosions do</a>',
+'<a href="javascript:location.reload(true)">A clear conscience is usually the sign of a bad memory</a>',
+'<a href="javascript:location.reload(true)">Life is not about waiting for the storm to pass, it`s about learning to dance in the rain</a>',
+'<a href="javascript:location.reload(true)">To steal ideas from one person is plagiarism; to steal from many is research</a>',
+'<a href="javascript:location.reload(true)">Maybe if we tell people the brain is an app, they will start using it</a>',
+'<a href="javascript:location.reload(true)">Seeing a cockroach in your room isn`t scary, it`s scary when it disappears</a>',
+'<a href="javascript:location.reload(true)">There is no love sincerer than the love of food</a>',
+'<a href="javascript:location.reload(true)">A good friend will help you when you fall, a best friend laughs in your face before helping you</a>',
+'<a href="javascript:location.reload(true)">I hate it when people ask me what I`m doing tomorrow, I don`t even know what I`m doing today</a>',
+'<a href="javascript:location.reload(true)">Doing nothing is hard, you never know when you`re done</a>',
+'<a href="javascript:location.reload(true)">People say nothing is impossible, but I know people who do nothing everyday</a>',
+'<a href="javascript:location.reload(true)">One advantage of talking to yourself is that you know at least somebody is listening</a>',
+'<a href="javascript:location.reload(true)">The more you weight the harder you are to kidnap. Stay safe, eat cake</a>',
+'<a href="javascript:location.reload(true)">You cannot control other people but you can definitely control how you react to them</a>',
+'<a href="javascript:location.reload(true)">Negativity only affect you if you`re on the same frequency. Vibrate higher and you`ll attract positivity</a>',
+'<a href="javascript:location.reload(true)">Spending your day complaining about yesterday will not make tomorrow any better</a>',
+'<a href="javascript:location.reload(true)">Life is 10% what happens to you and 90% how you react to it</a>',
+'<a href="javascript:location.reload(true)">Set your goals high and don`t stop til you get there</a>',
+'<a href="javascript:location.reload(true)">Expect problems and eat them for breakfast</a>',
+'<a href="javascript:location.reload(true)">A smile is happiness you`ll find right under your nose</a>',
+'<a href="javascript:location.reload(true)">What is money? Paper only...</a>',
+'<a href="javascript:location.reload(true)">Do not argue with an idiot, he will drag you down to his level and beat you with experience</a>',
+'<a href="javascript:location.reload(true)">Gamers don`t die, we respawn</a>',
+'<a href="javascript:location.reload(true)">Gamers don`t age, we level up</a>',
+'<a href="javascript:location.reload(true)">Video Games don`t make Gamers violent, LAG does</a>',
+'<a href="javascript:location.reload(true)">Be strong... Me whispering to my WiFi signal</a>',
+'<a href="javascript:location.reload(true)">It`s DO or DO NOT, there is no try</a>',
+'<a href="javascript:location.reload(true)">Gamer Logic: The harder you press on the controller, the stronger the attack</a>',
+'<a href="javascript:location.reload(true)">Gamer Logic: The harder you press on the controller, the stronger the attack</a>',
+'<a href="javascript:location.reload(true)">The difference between stupidity and genius is that genius has its limits</a>',
+'<a href="javascript:location.reload(true)">Life is short, smile while you still have teeth</a>',
+'<a href="javascript:location.reload(true)">Zombies eat brains, you`re safe!</a>',
+'<a href="javascript:location.reload(true)">The difference between stupidity and genius is that genius has its limits</a>',
+'<a href="javascript:location.reload(true)">Money can`t buy happiness, but it can buy things that make us happy</a>',
+'<a href="javascript:location.reload(true)">Two wrongs don`t make a right, but they make a good excuse</a>'];
+s.sort(function() {return 0.5 - Math.random();}) //thanks to Mike (aka Mwinter) :)
+var sn=readCookie('sen')&&readCookie('sen')==s[0]? s[1] : s[0];
+document.getElementById('theS').innerHTML=sn;
+createCookie('sen',sn)
+}
+rs();
+</script>
+</body>
+</html>

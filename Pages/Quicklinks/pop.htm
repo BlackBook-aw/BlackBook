@@ -1,0 +1,26 @@
+<html>
+<head>
+<title></title>
+</head>
+<body>
+<button onclick="myFunction()" class="btn btn-link">Service Desk L2 Links</button>
+<p id="Admin"></p>
+<script>
+function myFunction() {
+    var text;
+    var favDrink = prompt("Make sure PKI Card is docked", "");
+    switch(favDrink) {
+        case ("A647758"): 
+	case ("a647758"):
+		parent.frames['Work'].location.href = "https://na-tx-022.asn.saacon.net/";
+        	text = "<font color=white> Hello Jec...</font>";
+        	break;		
+    	
+        default:
+        text = "<font color=white>Sorry, you are not on the Database as a Service Desk L2</font>";
+    }
+    document.getElementById("Admin").innerHTML = text;
+}
+</script>
+</body>
+</html>
